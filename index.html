@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин Вишиванок</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Шапка сайту -->
+  <header class="header">
+    <img src="images/4C04C0CA-8C1D-4320-9C40-DD276210F77F-1-1-1-1 (1).png" alt="solovey" class="logo">
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Жінкам</a></li>
+        <li><a href="#">Чоловікам</a></li>
+        <li><a href="#">Дівчаткам</a></li>
+        <li><a href="#">Хлопчикам</a></li>
+        <li><a href="#">Контакти</a></li>
+      </ul>
+    </nav>
+    <div class="cart" id="openCart">
+      <span class="cart-count">0</span>
+      <span class="cart-total">0.00 грн</span>
+      <img src="images/cart-icon.png" alt="Кошик" class="cart-icon">
+    </div>
+  </header>
+
+  <!-- Основна частина -->
+  <main class="main">
+    <!-- Ліва частина: Фільтри -->
+    <aside class="filters">
+      <div class="filter-price">
+        <h3>Фільтр по ціні</h3>
+        <label>Мін. ціна: <input type="number" id="minPrice" value="0" min="0"></label>
+        <label>Макс. ціна: <input type="number" id="maxPrice" value="2000" min="0"></label>
+      </div>
+      <div class="filter-category">
+        <h3>Категорії</h3>
+        <label><input type="checkbox" value="Жінкам"> Жінкам</label>
+        <label><input type="checkbox" value="Чоловікам"> Чоловікам</label>
+        <label><input type="checkbox" value="Дівчаткам"> Дівчаткам</label>
+        <label><input type="checkbox" value="Хлопчикам"> Хлопчикам</label>
+      </div>
+    </aside>
+
+    <!-- Права частина: Картки товарів -->
+    <section class="products">
+     
+      <div class="product-grid" id="productGrid"></div>
+      <div class="no-products" id="noProducts">Товари не знайдено</div>
+    </section>
+  </main>
+
+  <!-- Модальне вікно для товару -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <span class="close-modal">×</span>
+      <img id="modalImage" src="" alt="Товар">
+      <h3 id="modalName"></h3>
+      <p id="modalDescription"></p>
+      <p id="modalPrice"></p>
+      <button class="add-to-cart-modal">Додати в кошик</button>
+    </div>
+  </div>
+
+  <!-- Модальне вікно для кошика -->
+  <div class="modal" id="cartModal">
+    <div class="modal-content">
+      <span class="close-cart-modal">×</span>
+      <h3>Кошик</h3>
+      <div id="cartItems"></div>
+      <p id="cartTotal">Підсумок: 0.00 грн</p>
+      <button class="close-cart-btn">Закрити</button>
+    </div>
+  </div>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="contact-info">
+      <p>Контакти: +380  672 703 800</p>
+      <p>Email: solovey@ukr.net</p>
+    </div>
+    <div class="social-links">
+      <a href="https://www.instagram.com/vyshyvanka_solovey/">Facebook</a>
+      <a href="https://www.instagram.com/vyshyvanka_solovey/">Instagram</a>
+      <a href="https://www.instagram.com/vyshyvanka_solovey/">Twitter</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
